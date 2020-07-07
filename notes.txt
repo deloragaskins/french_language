@@ -1,0 +1,13 @@
+pedagogy
+
+grammar:
+source:https://www.professorjackrichards.com/wp-content/uploads/Grammar-instruction.pdf
+
+
+
+To-do:
+- read and take notes on line 4
+- create method/natural_source_aquisition.py
+- create function which pulls text from radio francais facile and creates sentences
+- create function which opens a browser and looks up a word
+- create a repository of natural language texts of interest
