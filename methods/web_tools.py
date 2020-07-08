@@ -58,7 +58,9 @@ def journal_en_francais_facile_puller(URL):
 
     sentences_list=nltk.sent_tokenize(text_block)
     with open(filename, 'w+') as f:
-        for sentence in sentences_list:
-            f.write(sentence)
-            f.write('\n')
+        # for sentence in sentences_list:
+        #     f.write(sentence)
+        #     f.write('\n')
+
+         f.write(text_block)
     return filename
