@@ -1,3 +1,21 @@
+def lookup_words():
+    import webbrowser
+    import strategies.inputs_file as InF
+    import nltk
+    #print(sentence)
+    word_list_string=str(InF.user_inputter('list unknown words'))
+
+    word_list = nltk.word_tokenize(word_list_string)
+
+    print(word_list)
+
+    #print('Dictionary choices are:Linguee')
+    dictionary_choice='Linguee'
+    for word in word_list:
+        if dictionary_choice=='Linguee':
+            url='https://www.linguee.com/english-french/search?source=auto&query=+'+word
+        webbrowser.open(url, new=0)
+
 
 def journal_en_francais_facile_puller(URL):
     import requests
