@@ -1,6 +1,7 @@
 executor_name='sample_runner'
 import nltk
 import random
+import numpy as np
 #nltk.download()
 
 import methods.web_tools as web_tools
@@ -35,7 +36,6 @@ total_paragraphs=len(bulk_text)
 # paragraph=bulk_text[paragraph_number]
 # sentence=BTA.return_sentence(bulk_text,paragraph_number,sentence_number)
 
-#SA.recreate_sentence(sentence)
 # # ########################################################################
 # #looking_up words
 # # dictionary_choice='Linguee'
@@ -44,6 +44,8 @@ total_paragraphs=len(bulk_text)
 # ##########################################################################
 #simple tools for sentence
 SA.parts_of_speech_finder(sentence)
+SA.recreate_sentence(sentence)
+
 #from outide
 # # #https://www.stat4decision.com/fr/traitement-langage-naturel-francais-tal-nlp/
 # # import strategies.stat4decision as ST4D
@@ -53,4 +55,3 @@ SA.parts_of_speech_finder(sentence)
 
 
 
-#web_tools.lookup_words()
