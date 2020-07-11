@@ -55,6 +55,8 @@ SA.recreate_sentence(sentence)
 
 
 
+#for bulk text
 BTA.word_finder(bulk_text)
 BTA.phrase_finder(bulk_text)
 BTA.printbulk_paragraphs(bulk_text)
+BTA.return_sentence(bulk_text,paragraph_number,sentence_number)
