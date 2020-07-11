@@ -46,23 +46,3 @@ total_paragraphs=len(bulk_text)
 
 
 #web_tools.lookup_words()
-#######################################################################
-multiplier=int(InF.user_inputter('type multipler'))
-baselist=[1,2,3,4,5,6,7,8,9,10]
-
-print('**********************')
-print('**********************')
-print('**********************')
-list_of_sentences=InF.read_resource(filename)
-which_sentences=[element * multiplier for element in baselist]
-for counter1 in which_sentences:
-    sentence=list_of_sentences[counter1]
-    sentence=sentence.replace("\n", "")
-    print(sentence)
-print(counter1)
-
-print('**********************')
-print('**********************')
-print('**********************')
-#SA.recreate_sentence(sentence)
-web_tools.lookup_words()
