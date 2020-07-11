@@ -10,6 +10,14 @@ import strategies.inputs_file as InF
 
 import strategies.wordgroups_analysis.sentence_analysis as SA
 import strategies.wordgroups_analysis.bulktext_analysis as BTA
+
+import methods.Guided_noticing as GN
+
+
+
+
+
+
 #######################################################################
 #AZ_lyrics
 #URL='https://lyrics.az/stromae/racine-carrie/papaoutai.html'
@@ -60,3 +68,17 @@ BTA.word_finder(bulk_text)
 BTA.phrase_finder(bulk_text)
 BTA.printbulk_paragraphs(bulk_text)
 BTA.return_sentence(bulk_text,paragraph_number,sentence_number)
+# ########################################################################
+# #Guided Noticing Tools
+# ##Tool 1:
+# #GN.print_sentences_containing_word(bulk_text)
+#
+# ##Tool 2:
+# #GN.recreate_sentences_containing_word(bulk_text)
+#
+# #Tools3/4
+#
+# #SA.recreate_sentence(sentence)
+
+#
+# #########################################################################
