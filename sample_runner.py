@@ -44,6 +44,12 @@ total_paragraphs=len(bulk_text)
 # ##########################################################################
 #simple tools for sentence
 SA.parts_of_speech_finder(sentence)
+#from outide
+# # #https://www.stat4decision.com/fr/traitement-langage-naturel-francais-tal-nlp/
+# # import strategies.stat4decision as ST4D
+# # outputs=ST4D.return_POS(sentence)
+# #  outputs=ST4D.return_stem(sentence)
+
 
 
 
