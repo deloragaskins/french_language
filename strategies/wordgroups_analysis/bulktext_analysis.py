@@ -48,3 +48,8 @@ def return_sentence(bulk_text,paragraph_number,sentence_number):
     sentence=sentences_list[sentence_number]
     return sentence
 
+def printbulk_paragraphs(bulk_text):
+    import strategies.inputs_file as InF
+    for paragraph in bulk_text:
+        InF.user_inputter(' ')
+        print (paragraph)
