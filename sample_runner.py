@@ -8,6 +8,7 @@ import methods.web_tools as web_tools
 
 import strategies.inputs_file as InF
 
+import strategies.wordgroups_analysis.bulktext_analysis as BTA
 #######################################################################
 #AZ_lyrics
 #URL='https://lyrics.az/stromae/racine-carrie/papaoutai.html'
@@ -21,12 +22,18 @@ URL='https://savoirs.rfi.fr/fr/apprendre-enseigner/langue-francaise/journal-en-f
 #database builders
 filename=web_tools.journal_en_francais_facile_puller(URL)
 #filename=web_tools.AZ_lyrics_puller(URL)
-######################################################################
 
-list_of_sentences=InF.read_resource(filename)
-sentence=list_of_sentences[0]
-########################################################################
- #sentence_based functions###
+######################################################################
+#obtain whole text and meaningful subsets from the indicated file
+bulk_text=InF.read_resource(filename)
+total_paragraphs=len(bulk_text)
+#
+# #meaningful compositional subsets
+# paragraph_number=2
+# sentence_number=0
+
+# paragraph=bulk_text[paragraph_number]
+# sentence=BTA.return_sentence(bulk_text,paragraph_number,sentence_number)
 
 #SA.recreate_sentence(sentence)
 
