@@ -1,3 +1,15 @@
+def function_doer_for_all_sentences(bulk_text,function_to_be_done):
+    import nltk
+    for counter3 in range(len(bulk_text)) :
+        paragraph_number=counter3
+        paragraph=bulk_text[paragraph_number]
+        sentences_list=nltk.sent_tokenize(paragraph)
+        total_sentences_in_paragraph=len(sentences_list)
+        for counter4 in range(total_sentences_in_paragraph):
+            sentence_number=counter4
+            sentence=return_sentence(bulk_text,paragraph_number,sentence_number)
+            outputs_FTBD=function_to_be_done(sentence)
+
 def word_finder(bulk_text):
     import strategies.inputs_file as InF
     import nltk

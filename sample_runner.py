@@ -82,3 +82,9 @@ BTA.return_sentence(bulk_text,paragraph_number,sentence_number)
 
 #
 # #########################################################################
+#Work in Progress
+
+#organisation
+function_to_be_done=SA.parts_of_speech_finder
+BTA.function_doer_for_all_sentences(bulk_text,function_to_be_done)
+
