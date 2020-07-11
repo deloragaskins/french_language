@@ -56,3 +56,4 @@ SA.recreate_sentence(sentence)
 
 
 BTA.word_finder(bulk_text)
+BTA.phrase_finder(bulk_text)
