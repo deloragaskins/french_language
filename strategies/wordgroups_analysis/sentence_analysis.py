@@ -16,21 +16,34 @@ def recreate_sentence(sentence):
 
     #find article/noun accords
     article_noun_accords_list=[]
-    all_found=str(InF.user_inputter('Are all of the articles/nouns listed:yes or no'))
-    while all_found=='no':
-        new_pair=InF.user_inputter('find article noun/accords')
-        article_noun_accords_list.append(new_pair)
-        new_pair_tokens=nltk.word_tokenize(new_pair)
-        print(new_pair_tokens)
-        tokens_removable.remove(new_pair_tokens[0])
-        tokens_removable.remove(new_pair_tokens[1])
-        random.shuffle(tokens_removable)
-        print(tokens_removable)
-        all_found=str(InF.user_inputter('Are all of the articles/nouns listed:yes or no'))
+    helping_piece='phrases'
+    info_message_str='Enter'+helping_piece +'one at a time and then press enter'
+    print(info_message_str)
+    info_message_str='When done type \'finished\''
+    print(info_message_str)
 
+    new_set=InF.user_inputter('find '+helping_piece)
+    while new_set !='finished':
+        article_noun_accords_list.append(new_set)
+        new_set_tokens=nltk.word_tokenize(new_set)
+
+        valid_check=0
+        for tokens in new_set_tokens:
+            if token in tokens_removable:
+                valid_check+=1
+
+        if valid_check == len(new_set_tokens):
+            for tokens in new_set_tokens:
+                tokens_removable.remove(tokens)
+        else:
+            'please check for typos and try again'
+        new_set=InF.user_inputter('find '+helping_piece)
+        #print(new_set_tokens)
+        #print(tokens_removable)
+    random.shuffle(tokens_removable)
     print('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
     print('verbs:'+ verbs)
-    print('pairs found:'+ str(article_noun_accords_list))
+    print('helping sets found:'+ str(article_noun_accords_list))
     print('leftovers:' +str(tokens_removable))
 
     sentence_attempt=str(InF.user_inputter('Type the sentence'))
@@ -38,6 +51,8 @@ def recreate_sentence(sentence):
     return
 
 def parts_of_speech_finder(sentence):
+
+
     # nouns=InF.user_inputter('find subject')
     #
     # print('le COD répond à la question « Qui ? » ou « Quoi ?')

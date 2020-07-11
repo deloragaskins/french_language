@@ -3,11 +3,11 @@ import nltk
 import random
 #nltk.download()
 
-import methods.sentence_analysis as SA
 import methods.web_tools as web_tools
 
 import strategies.inputs_file as InF
 
+import strategies.wordgroups_analysis.sentence_analysis as SA
 import strategies.wordgroups_analysis.bulktext_analysis as BTA
 #######################################################################
 #AZ_lyrics
@@ -42,6 +42,8 @@ total_paragraphs=len(bulk_text)
 # # dictionary_choice='wordreference'
 # # web_tools.lookup_words(dictionary_choice)
 # ##########################################################################
+#simple tools for sentence
+SA.parts_of_speech_finder(sentence)
 
 
 
