@@ -9,9 +9,18 @@ import methods.web_tools as web_tools
 import strategies.inputs_file as InF
 
 #######################################################################
-URL='https://savoirs.rfi.fr/fr/apprendre-enseigner/langue-fran%C3%A7aise/journal-en-francais-facile-03072020-20h00-gmt'
+#AZ_lyrics
+#URL='https://lyrics.az/stromae/racine-carrie/papaoutai.html'
+#URL='https://lyrics.az/stromae/racine-carree/batard.html'
+
+#journal_en_francais_facile links
+#URL='https://savoirs.rfi.fr/fr/apprendre-enseigner/langue-fran%C3%A7aise/journal-en-francais-facile-03072020-20h00-gmt'
+#URL='https://savoirs.rfi.fr/fr/apprendre-enseigner/langue-fran%C3%A7aise/journal-en-francais-facile-08072020-20h00-gmt'
+URL='https://savoirs.rfi.fr/fr/apprendre-enseigner/langue-francaise/journal-en-francais-facile-09072020-20h00-gmt'
+
 #database builders
 filename=web_tools.journal_en_francais_facile_puller(URL)
+#filename=web_tools.AZ_lyrics_puller(URL)
 ######################################################################
 
 list_of_sentences=InF.read_resource(filename)
