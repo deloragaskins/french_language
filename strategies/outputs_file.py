@@ -3,7 +3,7 @@ exec(open('header.py').read())
 def outpath_websource(websourcechoice):
     import os
 
-    if websourcechoice=='journal_en_francais_facile':
+    if websourcechoice=='journal_en_francais_facile' or 'AZ_lyrics':
         outpath_loc=output_dir1
         if user_OS=='Windows':
             outpath = outpath_loc+'\\'+ websourcechoice +'\\'
