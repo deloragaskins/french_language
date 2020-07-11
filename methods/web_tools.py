@@ -42,18 +42,28 @@ def journal_en_francais_facile_puller(URL):
 
     websourcechoice='journal_en_francais_facile'
     outpath=OutF.outpath_websource(websourcechoice)
-    identifier=soup.title.string
 
+    identifier=soup.title.string
     identifier=identifier.replace("/", "")
     identifier=identifier.replace("Journal en français facile", "")
     identifier=identifier.replace("|", "")
-
     identifier=identifier.replace("20h00 GMT", "")
     identifier=identifier.replace("RFI SAVOIRS", "")
-    print(identifier)
     identifier=identifier.replace(" ", "")
 
+    filename=outpath+identifier+'.txt'
 
+    #sentences_list=nltk.sent_tokenize(text_block)
+    with open(filename, 'w+') as f:
+        # for sentence in sentences_list:
+        #     f.write(sentence)
+        #     f.write('\n')
+
+         f.write(text_block)
+
+    print('text saved at: ' +'\n'+filename)
+
+    return filename
     filename=outpath+identifier+'.txt'
 
     sentences_list=nltk.sent_tokenize(text_block)
