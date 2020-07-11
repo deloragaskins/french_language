@@ -51,6 +51,21 @@ def recreate_sentence(sentence):
     return
 
 def parts_of_speech_finder(sentence):
+    import spacy
+    nlp = spacy.load("fr_core_news_sm")
+    doc = nlp(sentence)
+    word_list=[]
+    parts_list=[]
+    for token in doc:
+        # #     #print(token.text, token.lemma_, token.pos_, token.tag_, token.dep_,
+        # #     #            token.shape_, token.is_alpha, token.is_stop)
+        word_list.append(token.text)
+        parts_list.append(token.pos_)
+
+    print(word_list)
+    print(parts_list)
+    return word_list,parts_list
+
 
 
     # nouns=InF.user_inputter('find subject')
