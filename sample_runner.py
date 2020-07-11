@@ -36,6 +36,12 @@ total_paragraphs=len(bulk_text)
 # sentence=BTA.return_sentence(bulk_text,paragraph_number,sentence_number)
 
 #SA.recreate_sentence(sentence)
+# # ########################################################################
+# #looking_up words
+# # dictionary_choice='Linguee'
+# # dictionary_choice='wordreference'
+# # web_tools.lookup_words(dictionary_choice)
+# ##########################################################################
 
 
 
