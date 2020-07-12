@@ -1,13 +1,41 @@
-pedagogy
+To-do ideas for project:
+self: read jackrichards site again
+
+#features add
+1)add looked words to list  to remember them later
+2)print the word frequencies
+3)create a reflections document
+4)
+-import strategies.wordgroups_analysis.paragraph_analysis as PA
+-#PA.recreate_paragraph(paragraph)
+5)drills on:
+pronouns and their motion
+
+
+#fixes
+-pause in print bulk paragraph if empty
+-handle different types of quote marks
+
+
+To-Done:
+- create function which scrapes radio francais facile and adds it to the database
+- create function which opens a browser and looks up a word
+-manage making small mistakes without having to redo everything
+- create a repository of natural language texts of interest
+
+To-do for coding:
+- saves the YAML file
+
+
+##############################################################
+#notes
+coding:
+https://stackoverflow.com/questions/4302027/how-to-open-a-url-in-python
+
+pedagogy:
 
 grammar:
 source:https://www.professorjackrichards.com/wp-content/uploads/Grammar-instruction.pdf
-
-
-
-To-do:
-- read and take notes on line 4
-- create method/natural_source_aquisition.py
-- create function which pulls text from radio francais facile and creates sentences
-- create function which opens a browser and looks up a word
-- create a repository of natural language texts of interest
+https://www.tandfonline.com/doi/full/10.1080/01411920500401997?src=recsys
+https://pdfs.semanticscholar.org/1b46/943bc738faa37aa28424faeac4a1a98d98ae.pdf
+https://www.thoughtco.com/sentence-combining-grammar-1692085#:~:text=Sentence%20combining%20is%20the%20process,traditional%20methods%20of%20teaching%20grammar.
