@@ -24,7 +24,7 @@ def recreate_sentence(sentence):
 
     new_set=InF.user_inputter('find '+helping_piece)
     while new_set !='finished':
-        article_noun_accords_list.append(new_set)
+
         new_set_tokens=nltk.word_tokenize(new_set)
 
         valid_check=0
@@ -33,10 +33,11 @@ def recreate_sentence(sentence):
                 valid_check+=1
 
         if valid_check == len(new_set_tokens):
+            article_noun_accords_list.append(new_set)
             for tokens in new_set_tokens:
                 tokens_removable.remove(tokens)
         else:
-            'please check for typos and try again'
+            print('please check for typos and try again')
         new_set=InF.user_inputter('find '+helping_piece)
         #print(new_set_tokens)
         #print(tokens_removable)
