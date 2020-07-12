@@ -34,7 +34,7 @@ def recreate_sentences_containing_word(bulk_text):
     import nltk
     import strategies.inputs_file as InF
     import strategies.wordgroups_analysis.bulktext_analysis as BTA
-    import strategies.wordgroups_analysis.sentance_analysis as SA
+    import strategies.wordgroups_analysis.sentence_analysis as SA
     in_sentences, in_paragraph=BTA.word_finder(bulk_text)
 
     info_message_str='pick a sentence number (less than '+str(len(in_sentences))+' but no less than 0) to start with:'

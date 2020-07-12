@@ -17,7 +17,7 @@ def recreate_sentence(sentence):
     #find article/noun accords
     article_noun_accords_list=[]
     helping_piece='phrases'
-    info_message_str='Enter'+helping_piece +'one at a time and then press enter'
+    info_message_str='Enter '+helping_piece +' one at a time and then press enter'
     print(info_message_str)
     info_message_str='When done type \'finished\''
     print(info_message_str)
@@ -28,7 +28,7 @@ def recreate_sentence(sentence):
         new_set_tokens=nltk.word_tokenize(new_set)
 
         valid_check=0
-        for tokens in new_set_tokens:
+        for token in new_set_tokens:
             if token in tokens_removable:
                 valid_check+=1
 
