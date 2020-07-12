@@ -1,8 +1,10 @@
 import nltk
 import strategies.inputs_file as InF
+import spacy
+import random
 
 def recreate_sentence(sentence):
-    import random
+
     tokens = nltk.word_tokenize(sentence)
     tokens_removable=tokens.copy()
     tokens_shuffle=tokens.copy()
@@ -52,7 +54,6 @@ def recreate_sentence(sentence):
     return
 
 def parts_of_speech_finder(sentence):
-    import spacy
     nlp = spacy.load("fr_core_news_sm")
     doc = nlp(sentence)
     word_list=[]

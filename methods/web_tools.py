@@ -1,7 +1,15 @@
+import requests
+from bs4 import BeautifulSoup
+import urllib.request
+import nltk
+import webbrowser
+
+
+import strategies.outputs_file as OutF
+import strategies.inputs_file as InF
+
 def lookup_words(dictionary_choice):
-    import webbrowser
-    import strategies.inputs_file as InF
-    import nltk
+
     #print(sentence)
     word_list_string=str(InF.user_inputter('list unknown words'))
 
@@ -22,12 +30,6 @@ def lookup_words(dictionary_choice):
 
 
 def journal_en_francais_facile_puller(URL):
-    import requests
-    from bs4 import BeautifulSoup
-    import urllib.request
-    import strategies.outputs_file as OutF
-    import nltk
-
     with urllib.request.urlopen(URL) as response:
         html = response.read()
     soup = BeautifulSoup(html, 'html.parser')
@@ -67,14 +69,6 @@ def journal_en_francais_facile_puller(URL):
 
 
 def AZ_lyrics_puller(URL):
-    import requests
-    from bs4 import BeautifulSoup
-    import urllib.request
-    import strategies.outputs_file as OutF
-    import nltk
-
-    import urllib.request
-
     class AppURLopener(urllib.request.FancyURLopener):
         version = "Mozilla/5.0"
 
