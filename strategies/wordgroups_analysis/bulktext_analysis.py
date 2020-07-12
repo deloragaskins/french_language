@@ -61,6 +61,7 @@ def return_sentence(bulk_text,paragraph_number,sentence_number):
     return sentence
 
 def printbulk_paragraphs(bulk_text):
+    print('begin print')
     import strategies.inputs_file as InF
     for paragraph in bulk_text:
         InF.user_inputter(' ')
