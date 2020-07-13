@@ -11,6 +11,20 @@ self: read jackrichards site again
 5)drills on:
 pronouns and their motion
 
+6) Add social media
+twitter scraping:
+musees
+https://twitter.com/museeorsay?lang=en
+https://developer.twitter.com/en/apply-for-access
+https://twitter.com/MuseeLouvre?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
+Political Figures
+https://twitter.com/EmmanuelMacron
+https://twitter.com/sophie_wilmes?lang=fr
+
+
+
+-highlight casual vs formal language
+
 
 #fixes
 -pause in print bulk paragraph if empty
@@ -39,3 +53,7 @@ source:https://www.professorjackrichards.com/wp-content/uploads/Grammar-instruct
 https://www.tandfonline.com/doi/full/10.1080/01411920500401997?src=recsys
 https://pdfs.semanticscholar.org/1b46/943bc738faa37aa28424faeac4a1a98d98ae.pdf
 https://www.thoughtco.com/sentence-combining-grammar-1692085#:~:text=Sentence%20combining%20is%20the%20process,traditional%20methods%20of%20teaching%20grammar.
+
+
+Scraping:
+https://www.promptcloud.com/can-you-scrape-extract-linkedin-facebook/
