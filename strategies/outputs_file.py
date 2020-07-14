@@ -19,7 +19,7 @@ def outpath_websource(websourcechoice):
         else:
             print('invalid OS')
         outpath_loc=parser.get('file_locations', 'local_data_dir')
-        outpath_loc=outpath_loc[-1:-1]
+        outpath_loc=outpath_loc[1:-1]
         outpath = outpath_loc+spacer_char+ websourcechoice +spacer_char
         if not os.path.exists(outpath):
             os.makedirs(outpath)
