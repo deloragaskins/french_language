@@ -4,18 +4,23 @@ import sys
 
 def outpath_websource(websourcechoice):
     parser = SafeConfigParser()
-    parser.read('../setup/user.ini')
+    parser.read('./setup/user.ini')
     candidate='OS'
     print(parser.has_section(candidate))
-    print (parser.get('OS', 'user_OS'))
-
+    user_OS=parser.get('OS', 'user_OS')
+    user_OS=user_OS[1:-1]
+    print (user_OS)
 
     if websourcechoice=='journal_en_francais_facile' or 'AZ_lyrics':
-        outpath_loc==parser.get('file_locations', 'local_data_dir')
         if user_OS=='Windows':
-            outpath = outpath_loc+'\\'+ websourcechoice +'\\'
-        if user_OS=='Ubuntu':
-            outpath = outpath_loc+'/'+websourcechoice +'/'
+            spacer_char='\\'
+        elif user_OS=='Ubuntu':
+            spacer_char='/'
+        else:
+            print('invalid OS')
+        outpath_loc=parser.get('file_locations', 'local_data_dir')
+        outpath_loc=outpath_loc[-1:-1]
+        outpath = outpath_loc+spacer_char+ websourcechoice +spacer_char
         if not os.path.exists(outpath):
             os.makedirs(outpath)
     else:
