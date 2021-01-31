@@ -64,8 +64,8 @@ def parts_of_speech_finder(sentence):
         word_list.append(token.text)
         parts_list.append(token.pos_)
 
-    print(word_list)
-    print(parts_list)
+    #print(word_list)
+    #print(parts_list)
     return word_list,parts_list
 
 
@@ -76,4 +76,4 @@ def parts_of_speech_finder(sentence):
     # nouns=InF.user_inputter('find COD')
     # print('répond à la question : « À qui ? À quoi ? De qui ? De quoi ? »')
     # nouns=InF.user_inputter('find COD')
-    return
+    #return
