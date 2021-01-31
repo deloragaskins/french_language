@@ -61,7 +61,11 @@ def return_sentence(bulk_text,paragraph_number,sentence_number):
 
 def printbulk_paragraphs(bulk_text):
     print('begin print')
+    print('type Q to end printing')
+    print('type enter to continue printing')
 
     for paragraph in bulk_text:
-        InF.user_inputter(' ')
+        inp=InF.user_inputter(' ')
+        if inp=='Q':
+            break
         print (paragraph)
