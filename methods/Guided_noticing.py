@@ -22,10 +22,11 @@ def print_sentences_containing_word(bulk_text):
 
 
     for counter1 in np.arange(start_num,len(in_sentences)):
-        while continuer=='y':
+        if continuer=='y':
             sentences_list=nltk.sent_tokenize(bulk_text[in_paragraph[counter1]])
             print('\n')
             print(sentences_list[in_sentences[counter1]])
+            print('in_paragraph value andin_sentences value' +str(in_paragraph[counter1])+str(in_sentences[counter1]))
             info_message_str=' \n waiting \n'
             continuer=InF.user_inputter(info_message_str)
     return
