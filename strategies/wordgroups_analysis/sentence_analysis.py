@@ -68,6 +68,17 @@ def parts_of_speech_finder(sentence):
     #print(parts_list)
     return word_list,parts_list
 
+def extract_verbs (sentence):
+    nlp = spacy.load("fr_core_news_sm")
+    doc = nlp(sentence)
+    word_list=[]
+    for token in doc:
+        # #     #print(token.text, token.lemma_, token.pos_, token.tag_, token.dep_,
+        # #     #            token.shape_, token.is_alpha, token.is_stop)
+        if token.pos_ =='VERB':
+            word_list.append(token.text)
+    return word_list
+
 
 
     # nouns=InF.user_inputter('find subject')
